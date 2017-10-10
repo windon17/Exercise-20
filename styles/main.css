@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+.main-content{
+    width:960px;
+    margin:20px auto;
+}
+
+.fl{
+    float:left;
+    width:50%;
+}
+
+.fr{
+    float:right;
+    width:50%;
+}
+
+/* Makes all the text blue if the screen less less than 500 pixels wide. */
+@media screen and (max-width: 500px){
+    body {
+        color: blue;
+    }
+}
+
+/* Makes the background of all paragraph tags grey if the screen is between 400 pixels and 800 pixels */
+@media screen and (min-width: 400px) and (max-width: 800px){
+    p {
+        background-color: gray;
+    }
+}
+/* Makes the font size of the ordered list to 20px if the screen is greater than 960px */
+@media screen and (min-width: 960px){
+    ol {
+        font-size: 20px;
+    }
+}
+
+/* if the screen is less than 480px makes .main-content span the whole screen. Remove the floats on .fl and .fr Make .fl and .fr span all available space */
+
+@media screen and (max-width: 480px){
+    .main-content {
+        width:100%;
+    }
+    .fr, .fl {
+        clear: both;
+        width: 100%;
+    }
+}
